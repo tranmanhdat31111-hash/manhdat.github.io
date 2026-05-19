@@ -1,20 +1,154 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Giới thiệu bản thân</title>
+<title>Giới thiệu bản thân</title>
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .footer{
+body{
+  font-family:Arial;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.5)),
+  url('https://images.openai.com/static-rsc-4/1_cuQisGKmVIHLecIuvZy4H8FwyZYxFipeI0YcyeY-jdDCGMJF9R6FybqaqG_DDy4biiQyE2SHkOgb7gJjR3hyLbkhpS6fULvlaitouMS75yRDmyjXdQVdMp-zpUwGxIrOfoXkLw-aDNTNbB1_vXMyrXBwOD05cPlkRdVpxdGobvfWpYzAXwzdnZSFR84CTh?purpose=fullsize');
+
+  background-size:110%;
+  background-position:center;
+  background-attachment:fixed;
+
+  color:white;
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  padding:40px 0;
+}
+
+.hero{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.avatar{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  border:5px solid #38bdf8;
+  object-fit:cover;
+  box-shadow:0 0 30px #38bdf8;
+}
+
+h1{
+  font-size:55px;
+  margin-top:20px;
+  color:#38bdf8;
+}
+
+.job{
+  font-size:24px;
+  margin-top:10px;
+  color:#cbd5e1;
+}
+
+.desc{
+  margin-top:20px;
+  font-size:18px;
+  line-height:1.7;
+  color:#e2e8f0;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 35px;
+  background:#38bdf8;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  transition:0.3s;
+  font-size:18px;
+}
+
+.btn:hover{
+  background:#0284c7;
+  transform:scale(1.05);
+}
+
+.section-title{
+  text-align:center;
+  font-size:40px;
+  margin:60px 0 30px;
+  color:#38bdf8;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:0.4s;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+.info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:40px;
+}
+
+.card{
+  background:#1e293b;
+  padding:15px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+  overflow:hidden;
+}
+
+.card h3{
+  color:#38bdf8;
+  margin-bottom:10px;
+  font-size:28px;
+}
+
+.skill-img{
+  width:100%;
+  height:160px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  margin:0 auto 15px;
+  background:white;
+  border-radius:10px;
+  padding:10px;
+}
+
+/* FOOTER */
+
+.footer{
   background:#071b45;
   color:white;
   text-align:center;
@@ -37,16 +171,12 @@
   text-decoration:none;
 }
 
-.info{
-  margin:25px 0;
-  line-height:1.8;
-}
-
 .social{
   display:flex;
   justify-content:center;
   gap:15px;
   margin:20px 0;
+  flex-wrap:wrap;
 }
 
 .social a{
@@ -60,9 +190,11 @@
 .copy{
   border-top:1px solid rgba(255,255,255,0.3);
   padding-top:15px;
+  margin-top:20px;
 }
 
-/* nút điện thoại rung */
+/* NÚT ĐIỆN THOẠI */
+
 .phone-btn{
   position:fixed;
   bottom:90px;
@@ -91,7 +223,8 @@
   100%{transform:rotate(0);}
 }
 
-/* nút tin nhắn */
+/* NÚT CHAT */
+
 .chat-btn{
   position:fixed;
   bottom:25px;
@@ -108,313 +241,154 @@
   text-decoration:none;
   z-index:999;
 }
- 
-<!-- NÚT TIN NHẮN -->
-<a href="https://zalo.me/0819551862" target="_blank" class="chat-btn">
-  💬
-</a>
-   
-    body{
-  font-family:Arial;
 
-  background:
-  linear-gradient(rgba(0,0,0,0.5),
-  rgba(0,0,0,0.5)),
-  url('https://images.openai.com/static-rsc-4/1_cuQisGKmVIHLecIuvZy4H8FwyZYxFipeI0YcyeY-jdDCGMJF9R6FybqaqG_DDy4biiQyE2SHkOgb7gJjR3hyLbkhpS6fULvlaitouMS75yRDmyjXdQVdMp-zpUwGxIrOfoXkLw-aDNTNbB1_vXMyrXBwOD05cPlkRdVpxdGobvfWpYzAXwzdnZSFR84CTh?purpose=fullsize');
-
-  background-size:110%;
-  background-position:center;
-  background-attachment:fixed;
-
-  color:white;
-
-  animation:bgMove 15s ease infinite alternate;
-}
-
-    .container{
-      width:90%;
-      max-width:1100px;
-      margin:auto;
-      padding:40px 0;
-    }
-
-    .hero{
-      text-align:center;
-      padding:60px 20px;
-    }
-
-    .avatar{
-      width:180px;
-      height:180px;
-      border-radius:50%;
-      border:5px solid #38bdf8;
-      object-fit:cover;
-      box-shadow:0 0 30px #38bdf8;
-    }
-
-    h1{
-      font-size:55px;
-      margin-top:20px;
-      color:#38bdf8;
-    }
-
-    .job{
-      font-size:24px;
-      margin-top:10px;
-      color:#cbd5e1;
-    }
-
-    .desc{
-      margin-top:20px;
-      font-size:18px;
-      line-height:1.7;
-      color:#e2e8f0;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:30px;
-      padding:14px 35px;
-      background:#38bdf8;
-      color:white;
-      text-decoration:none;
-      border-radius:12px;
-      transition:0.3s;
-      font-size:18px;
-    }
-
-    .btn:hover{
-      background:#0284c7;
-      transform:scale(1.05);
-    }
-
-    .section-title{
-      text-align:center;
-      font-size:40px;
-      margin:60px 0 30px;
-      color:#38bdf8;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .gallery img{
-      width:100%;
-      height:250px;
-      object-fit:cover;
-      border-radius:20px;
-      transition:0.4s;
-      box-shadow:0 0 20px rgba(0,0,0,0.4);
-    }
-
-    .gallery img:hover{
-      transform:scale(1.05);
-    }
-
-    .info{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      margin-top:40px;
-    }
-
-    .card{
-      background:#1e293b;
-      padding:25px;
-      border-radius:20px;
-      text-align:center;
-      box-shadow:0 0 15px rgba(0,0,0,0.3);
-    }
-
-    .card h3{
-      color:#38bdf8;
-      margin-bottom:10px;
-      font-size:28px;
-    }
-.skill-img{
-  width:100%;
-  height:160px;
-
-  object-fit:contain;
-  object-position:center;
-
-  display:block;
-
-  margin:0 auto 15px;
-
-  background:white;
-
-  border-radius:10px;
-
-  padding:10px;
-}
-
-.card{
-  background:#1e293b;
-
-  padding:15px;
-
-  border-radius:20px;
-
-  text-align:center;
-
-  box-shadow:0 0 15px rgba(0,0,0,0.3);
-
-  overflow:hidden;
-}
-    footer{
-      text-align:center;
-      margin-top:70px;
-      padding:30px;
-      color:#94a3b8;
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="hero">
+<div class="hero">
 
-      <img
-        src="z6804270828906_4addc2cee2a626c18ece087f6ec315f5.jpg"
-        class="avatar"
-      >
+<img
+src="z6804270828906_4addc2cee2a626c18ece087f6ec315f5.jpg"
+class="avatar"
+>
 
-      <h1>こんにちは 👋</h1>
+<h1>こんにちは 👋</h1>
 
-      <div class="job">
-      私は機械エンジニアです。探求すること、学ぶこと、そして新しいものを創造することが好きだ。
-      </div>
+<div class="job">
+私は機械エンジニアです。探求すること、学ぶこと、そして新しいものを創造することが好きだ。
+</div>
 
-      <div class="desc">
-    これは私の自己紹介ウェブサイトです。
+<div class="desc">
+これは私の自己紹介ウェブサイトです。
 私はデザインが好きで、昭和鋼機を愛しています。
-      </div>
+</div>
 
-      <a href="#" class="btn">
-       もし機械エンジニアになりたい、または交流したい方は、ぜひ私にご連絡ください。
-                                Zalo: 0867839314
-      </a>
+<a href="#" class="btn">
+もし機械エンジニアになりたい、または交流したい方は、ぜひ私にご連絡ください。
+Zalo: 0867839314
+</a>
 
-    </div>
+</div>
 
-    <h2 class="section-title">
-      プロフィール写真
-    </h2>
+<h2 class="section-title">
+プロフィール写真
+</h2>
 
-    <div class="gallery">
+<div class="gallery">
 
-      <img src="cont2-5.png">
+<img src="cont2-5.png">
 
-      <img src="cont2-4.png">
+<img src="cont2-4.png">
 
-      <img src="cont2-3.png">
+<img src="cont2-3.png">
 
-      <img src="cont2-1.png">
+<img src="cont2-1.png">
 
-    </div>
+</div>
 
-    <h2 class="section-title">
-      スキル
-    </h2>
+<h2 class="section-title">
+スキル
+</h2>
 
-    <div class="info">
+<div class="info">
 
-      <div class="card">
-  <img src="https://images.openai.com/static-rsc-4/-Tpwr1OjakRgKiZ8zrb5_5HF8Gqg650xvMemPbpZtAZdwpY50eH9E4JNMXGGtrgUsScxpPBp_VoWBhWuGuCTSh0PFdeZxaRGkG_v9FbYkd7CvJMgzoVss4OIYPviw2bsBovVa0EF2l6b4bS23SJ3S7sjWxMLq9HQq7SZtxm7LdlBlZ_Lsn5HFBbskBGIXxHh?purpose=fullsize" class="skill-img">
-  <h3>AUTOCAD</h3>
-  <p>機械設計</p>
+<div class="card">
+<img src="https://images.openai.com/static-rsc-4/-Tpwr1OjakRgKiZ8zrb5_5HF8Gqg650xvMemPbpZtAZdwpY50eH9E4JNMXGGtrgUsScxpPBp_VoWBhWuGuCTSh0PFdeZxaRGkG_v9FbYkd7CvJMgzoVss4OIYPviw2bsBovVa0EF2l6b4bS23SJ3S7sjWxMLq9HQq7SZtxm7LdlBlZ_Lsn5HFBbskBGIXxHh?purpose=fullsize" class="skill-img">
+
+<h3>AUTOCAD</h3>
+
+<p>機械設計</p>
 </div>
 
 <div class="card">
-  <img src="https://images.openai.com/static-rsc-4/y9oinb4s-zUBpAkge7zHqTP2ynYEaLkQPoO6mYYGVu09nBbsW2xVwujxEHFz9i4LmM0BHflkWL8bt9AzC8ZIcFeg9LxM6hyEVNA2oKimayT4fDgsApCA9hso4fP_6cNEGRljSCALD5TIb_zsU2m6yIR4HleX6che-7nKka2Hj1PdJL84BICC7g3_mGtZxBLP?purpose=fullsize" class="skill-img">
-  <h3>SolidWorks</h3>
-  <p>3D CAD設計</p>
+<img src="https://images.openai.com/static-rsc-4/y9oinb4s-zUBpAkge7zHqTP2ynYEaLkQPoO6mYYGVu09nBbsW2xVwujxEHFz9i4LmM0BHflkWL8bt9AzC8ZIcFeg9LxM6hyEVNA2oKimayT4fDgsApCA9hso4fP_6cNEGRljSCALD5TIb_zsU2m6yIR4HleX6che-7nKka2Hj1PdJL84BICC7g3_mGtZxBLP?purpose=fullsize" class="skill-img">
+
+<h3>SolidWorks</h3>
+
+<p>3D CAD設計</p>
 </div>
 
 <div class="card">
-  <img src="https://images.openai.com/static-rsc-4/Lfug0BQvmRFPLdpBAJCbpaTb9RaeyxoVNDnMZqI0mfvUbVSuGVWhfVvctEk-_iqjupBhFOy-XbMIHX0-V2sc-3kYovtxDIt3aATdbfQxWbCD5Y9kfNqqXy9j7z1pGR_Ky-h6eL3OoNuZPRPOt5ACcjgIfI9QJpYDHr2yeZVt_xJIZB7CrAUNAQeZpsSLiL7R?purpose=fullsize" class="skill-img">
-  <h3>Word Excel PowerPoint</h3>
-  <p>資料作成</p>
+<img src="https://images.openai.com/static-rsc-4/Lfug0BQvmRFPLdpBAJCbpaTb9RaeyxoVNDnMZqI0mfvUbVSuGVWhfVvctEk-_iqjupBhFOy-XbMIHX0-V2sc-3kYovtxDIt3aATdbfQxWbCD5Y9kfNqqXy9j7z1pGR_Ky-h6eL3OoNuZPRPOt5ACcjgIfI9QJpYDHr2yeZVt_xJIZB7CrAUNAQeZpsSLiL7R?purpose=fullsize" class="skill-img">
+
+<h3>Word Excel PowerPoint</h3>
+
+<p>資料作成</p>
 </div>
 
-    </div>
+</div>
 
-    <footer>
-      © 2026 - 私の個人ウェブサイト
-    </footer>
+</div>
 
-  </div>
-<!-- PHẦN THÔNG TIN CUỐI TRANG -->
+<!-- FOOTER -->
+
 <footer class="footer">
 
-  <h2>MKT</h2>
+<h2>MKT</h2>
 
-  <p>Phần mềm Marketing đa kênh</p>
+<p>Phần mềm Marketing đa kênh</p>
 
-  <div class="info">
+<div>
 
-    <p>
-      📍 Tầng 4 Tòa Nhà Stellar Garden, 35 Lê Văn Thiêm
-    </p>
+<p>
+📍 Tầng 4 Tòa Nhà Stellar Garden, 35 Lê Văn Thiêm
+</p>
 
-    <p>
-      📞 SĐT:
-      <a href="tel:0867839314">
-        0867839314
-      </a>
-    </p>
+<p>
+📞 SĐT:
+<a href="tel:0867839314">
+0867839314
+</a>
+</p>
 
-    <p>
-      🌐 Website:
-      <a href="https://mktcare.net/" target="_blank">
-        mktcare.net
-      </a>
-    </p>
+<p>
+🌐 Website:
+<a href="https://mktcare.net/" target="_blank">
+mktcare.net
+</a>
+</p>
 
-  </div>
+</div>
 
-  <div class="social">
+<div class="social">
 
-    <a href="https://facebook.com" target="_blank">
-      Facebook
-    </a>
+<a href="https://facebook.com" target="_blank">
+Facebook
+</a>
 
-    <a href="https://youtube.com" target="_blank">
-      YouTube
-    </a>
+<a href="https://youtube.com" target="_blank">
+YouTube
+</a>
 
-    <a href="https://t.me/minhquangmkt" target="_blank">
-      Telegram
-    </a>
+<a href="https://t.me/minhquangmkt" target="_blank">
+Telegram
+</a>
 
-  </div>
+</div>
 
-  <p class="copy">
-    © Copyright 2026 by MKT
-  </p>
+<p class="copy">
+© Copyright 2026 by MKT
+</p>
 
 </footer>
 
 <!-- NÚT ĐIỆN THOẠI -->
+
 <a href="tel:0867839314" class="phone-btn">
 ☎
 </a>
 
 <!-- NÚT CHAT -->
+
 <a href="https://zalo.me/0867839314"
 target="_blank"
 class="chat-btn">
 💬
 </a>
 
-</body>
-</html>
 </body>
 </html>
