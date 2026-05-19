@@ -14,6 +14,132 @@
       box-sizing:border-box;
     }
 
+    .footer{
+  background:#071b45;
+  color:white;
+  text-align:center;
+  padding:40px 20px 20px;
+  margin-top:50px;
+}
+
+.footer h2{
+  font-size:40px;
+  margin-bottom:5px;
+}
+
+.footer p{
+  font-size:16px;
+  margin:10px 0;
+}
+
+.footer a{
+  color:white;
+  text-decoration:none;
+}
+
+.info{
+  margin:25px 0;
+  line-height:1.8;
+}
+
+.social{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+
+.social a{
+  background:white;
+  color:#071b45;
+  padding:10px 15px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+.copy{
+  border-top:1px solid rgba(255,255,255,0.3);
+  padding-top:15px;
+}
+
+/* nút điện thoại rung */
+.phone-btn{
+  position:fixed;
+  bottom:90px;
+  left:25px;
+  width:65px;
+  height:65px;
+  background:#1266ff;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  text-decoration:none;
+  animation:ring 1s infinite;
+  box-shadow:0 0 0 10px rgba(18,102,255,0.2);
+  z-index:999;
+}
+
+@keyframes ring{
+  0%{transform:rotate(0);}
+  20%{transform:rotate(20deg);}
+  40%{transform:rotate(-20deg);}
+  60%{transform:rotate(15deg);}
+  80%{transform:rotate(-15deg);}
+  100%{transform:rotate(0);}
+}
+
+/* nút tin nhắn */
+.chat-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:70px;
+  height:70px;
+  background:#4b35f5;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  text-decoration:none;
+  z-index:999;
+}
+    <!-- PHẦN THÔNG TIN CUỐI TRANG -->
+<footer class="footer">
+  <h2>MKT</h2>
+  <p>Phần mềm Marketing đa kênh</p>
+
+  <div class="info">
+    <p>📍 Tầng 4 Tòa Nhà Stellar Garden, 35 Lê Văn Thiêm, Thanh Xuân, HN</p>
+    <p>📞 SĐT / Zalo: <a href="tel:0819551862">0819 551 862</a></p>
+    <p>🌐 Website: <a href="https://mktcare.net/" target="_blank">mktcare.net</a></p>
+  </div>
+
+  <h3>Kết nối với chúng tôi</h3>
+
+  <div class="social">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://youtube.com" target="_blank">YouTube</a>
+    <a href="https://t.me/minhquangmkt" target="_blank">Telegram</a>
+  </div>
+
+  <p class="copy">© Copyright 2026 by MKT</p>
+</footer>
+
+<!-- NÚT ĐIỆN THOẠI RUNG -->
+<a href="tel:0819551862" class="phone-btn">
+  ☎
+</a>
+
+<!-- NÚT TIN NHẮN -->
+<a href="https://zalo.me/0819551862" target="_blank" class="chat-btn">
+  💬
+</a>
+   
     body{
   font-family:Arial;
 
